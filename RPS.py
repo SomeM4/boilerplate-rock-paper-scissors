@@ -31,5 +31,3 @@ def player(prev_play, opponent_history=[]):
         return "S"
     elif last_opp == "S":
         return "R"
-        
-    return guess
