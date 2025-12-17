@@ -7,6 +7,14 @@ def player(prev_play, opponent_history=[]):
     if len(opponent_history) == 0:
         return "P" 
     
+    # Strategy 1: Beats opponent play last
+    last_opp = opponent_history[-1]
     
+    if last_opp == "R":
+        return "P"
+    elif last_opp == "P":
+        return "S"
+    elif last_opp == "S":
+        return "R"
         
     return guess
